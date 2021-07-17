@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% for user in  user%}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 sm-4 mt-4">
+     
+      <a class="btn btn-info">{{user.username}}</a>
+
+    </div>
+
+    <div class="col-md-3 sm-6 mt-4">
+     
+      <a class="btn btn-info"> {{user.email}}</a>
+
+    </div>
+
+    <div class="col-md-2 sm-4 mt-4">
+    <form action="mydelete" method="POST">
+      {% csrf_token %}
+      <a class="btn btn-danger" href="myadminmydelete/{{user.username}}"> Delete</a>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock body %}
+

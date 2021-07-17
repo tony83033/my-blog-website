@@ -23,6 +23,6 @@ urlpatterns = [
       path('',views.bloghome, name='bloghome'),
       path('mylogin',views.mylogin,name="mylogin"),
       path('mysignup',views.mysignup,name="mysignup"),
-      path('mylogout',views.mylogout,name="mtlogout"),
+      path('mylogout',views.mylogout,name="mylogout"),
       path('blog/<str:slug>',views.blogpage, name="blogpage"),
 ]

@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from .import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-   # path("/",include('bloghome.urls'))
-    path('', include('bloghome.urls')),
-    path('myadmin',include('sumitadmin.urls'))
+    path('',views.myadmin,name="myadmin"),
+    #path('login',views.adminlogin,name="login"),
+    path('mydelete/<str:slug>',views.mydelete,name="mydelete")
 ]

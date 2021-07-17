@@ -107,7 +107,7 @@
   
             <label for="">Enter your password</label>
             <input type="password" class="form-control" placeholder="Password" name="password">  
-           
+             {% csrf_token %}
              <button type="submit" class="btn btn-primary mt-4">Login</button>
             
           </form>
